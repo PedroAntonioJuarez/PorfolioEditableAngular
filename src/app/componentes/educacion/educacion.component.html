@@ -1,0 +1,16 @@
+<div class="educacion">
+    <app-add-educacion
+    (addEducacion)="addEducacion($event)">
+    </app-add-educacion>
+
+    <h1>Educación</h1> 
+    <div>
+        <ul>
+            <li *ngFor="let item of educacion" >
+                <h3 class="titulo-educacion">{{item.nombre}} <mat-icon mat-icon> delete </mat-icon > </h3>
+                
+                <span>{{item.descripcion}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+{
+  "educacion": [
+    {
+      "id": 1,
+      "nombre": "Inteprete Dramatico",
+      "descripcion": "Universidad Nacional de Tucumán"
+    },
+    {
+      "nombre": "Técnico en Música Popular y Academaia",
+      "descripcion": "E..S.E.A Escuela Superior de Educación Artística ",
+      "id": 2
+    }
+  ],
+  "perfil": [
+    {
+      "name": "Pedro",
+      "apellido": "Juárez",
+      "profesion": "Desarrollador Web Front-End",
+      "estudios": {
+        "secundario": "Tecnico en Música Popular y Academica",
+        "universitario": "Inteprete Dramatico"
+      },
+      "sobreMi": "Hola, mi nombre es Pedro Juárez y soy Desarrolador Web FrontEnd con residencia en Buenos Aires. Actualmente sigo estudiando para ampliar mis conocimientos (Node.js, Angular, Typescript, MySQL). Experto en el trabajo en equipo. Apasionado por el diseño web con interfaces dinámicas que se adapten a todos los dispositivos con una excelente experiencia de usuario"
+    }
+  ],
+  "experiencia": [
+    {
+      "id": 1,
+      "nombre": "pedro",
+      "descripcion": "probando"
+    },
+    {
+      "nombre": "hola",
+      "description": "nueva experienda",
+      "id": 2
+    },
+    {
+      "nombre": "hola esta es mi nueva tarde",
+      "description": "jjj",
+      "id": 3
+    },
+    {
+      "nombre": "probando la nueva experiencia",
+      "description": "esto es lo mas",
+      "id": 4
+    },
+    {
+      "nombre": "hola nueva tarea",
+      "description": "hooal gfertgert",
+      "id": 5
+    },
+    {
+      "nombre": "hola esta es mi nueva tarde",
+      "description": "1478523690",
+      "id": 6
+    },
+    {
+      "nombre": "esta es la nueva tarde",
+      "description": "pindonga",
+      "id": 7
+    },
+    {
+      "nombre": "imasjasjajsdasd",
+      "description": "1478523690",
+      "id": 8
+    },
+    {
+      "nombre": "kakakkaka",
+      "description": "mamamama",
+      "id": 9
+    },
+    {
+      "nombre": "creando",
+      "description": "1478523690",
+      "id": 10
+    },
+    {
+      "nombre": "nueva tarea",
+      "description": "argentina",
+      "id": 11
+    },
+    {
+      "nombre": "hola nueva tarea",
+      "description": "hogar",
+      "id": 12
+    }
+  ]
+}

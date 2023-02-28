@@ -1,0 +1,19 @@
+section {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    
+  
+   
+
+}
+
+section .progress {
+    height: 30px;
+    width: 75%;
+    
+    
+}

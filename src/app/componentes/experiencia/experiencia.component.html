@@ -1,0 +1,15 @@
+<section class="experiencia">
+<app-add-experiencia
+(onAddExperiencia)="addExperiencia($event)">
+</app-add-experiencia>
+    <h1>Experiencia</h1>
+    <ul *ngFor="let item of experiencias">
+        <li>{{item.nombre}}
+            <mat-icon mat-icon (click)="deleteExperiencia(experiencias)"> delete </mat-icon > 
+        </li>
+        <span>{{item.description}}</span>
+    </ul>  
+</section>
+
+
+

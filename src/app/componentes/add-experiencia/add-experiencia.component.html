@@ -1,0 +1,16 @@
+<h3>Añade una nueva experiencia</h3>
+<form action="" class="form-control" (ngSubmit)="onSubmit()">
+    <div class="">
+        <label for="text">Título</label><br>
+        <input type="text" name="text" id="text" placeholder="Agregar Experiencia"[(ngModel)]="texto">
+    </div>
+    <div class="">
+        <label for="descripcion">Descripción</label><br>
+        <input type="text" name="descripcion" id="descripcion" placeholder="Agregar día y hora"
+        [(ngModel)]="descripcion">
+    </div>
+
+    <input type="submit" value="Guardar tarea" class="btn btn-primary">
+
+</form>
+
