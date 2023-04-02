@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Educacion } from 'src/assets/models/educacion';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 
 
@@ -12,10 +13,12 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 export class EducacionComponent implements OnInit {
   educacion:Educacion[]=[]
   
+  formValue!: FormGroup
+  modeloEducacion: Educacion = new Educacion()
   
   
 
-   constructor(private porfolioService:PorfolioService){}
+   constructor(private porfolioService:PorfolioService, private formBulder: FormBuilder){}
 
    ngOnInit(): void {
     this.porfolioService.getEducacion().subscribe(e => {
@@ -28,7 +31,19 @@ export class EducacionComponent implements OnInit {
         this.educacion.push(data)
       })
     }
+
+    deleteEducacion(educacion:Educacion){
+      this.porfolioService.eliminarEducacion(educacion).subscribe( () => {
+        this.educacion = this.educacion.filter( (edu) => {
+          return edu.id !== educacion.id
+        })
+      })
+    }
       
+    abrirFormParaEditar(){}
+
+
+    guardarActualizacion(){}
    
     }
 

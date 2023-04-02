@@ -1,13 +1,47 @@
 <section class="sobre-mi" id="sobre-mi">
+    <div class="iterador" *ngFor="let item of sobreMi">
+    <div class="contenedor-btn">
+        <button class="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" mat-fab color="primary"  aria-label="Example icon button with a delete icon" (click)="botonEditar(item)" >
+        <mat-icon>edit</mat-icon>
+        </button>
+        
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Sobre mi </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form #miFormulario="ngForm" [formGroup]="formValue">
+                  <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Cuéntanos sobre ti</label>
+                    <textarea rows="20" class="form-control" id="message-text" formControlName="descripcion"></textarea>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" (click)="guardarActualizacion()" >Guardar</button>
+                  </div>
+                </form>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+  
+    </div>
     <h1 class="titulo">Sobre mi</h1>
     <div class=" contenido">
         <div class="contenedor-img">
             <img class="img" src="../../../assets/img/perfil.jpg" alt="">
         </div>
         <div class="contenedor-texto">
-            <h4 *ngFor="let item of sobreMi"> {{item.sobreMi}}</h4>
+            <h4 > {{item.descripcion}}</h4>
         </div>
     </div>
+</div>
     <div class="contenedor-lenguajes">
         <ul class="contenedor-logos">
           <li><img src="../../../assets/img/html-logo.png" alt="icono-html"></li>

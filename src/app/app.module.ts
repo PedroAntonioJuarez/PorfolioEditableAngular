@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponent } from './app-routing.module';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon'
+import {MatListModule} from '@angular/material/list'
 
 
 
@@ -30,6 +32,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,17 +49,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HardSoftSkillsComponent,
     AddExperienciaComponent,
     AddEducacionComponent,
-    
-  
+    routingComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatListModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

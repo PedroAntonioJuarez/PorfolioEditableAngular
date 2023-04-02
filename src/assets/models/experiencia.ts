@@ -1,12 +1,24 @@
 
-export interface Experiencia {
-    nombre: string
-    description: string;
-    id?: number
+// export interface Experiencia {
+//     nombre: string
+//     descripcion: string;
+//     id?: number
+
+    
+    
+// }
+
+export class Experiencia {
+    id?:number=0;
+    nombre: string='';
+    descripcion: string='';
+   
 
     
     
 }
+
+
 
 // export class Experiencia {
 //     nombre: string

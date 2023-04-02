@@ -4,13 +4,21 @@
     </app-add-educacion>
 
     <h1>Educación</h1> 
-    <div>
-        <ul>
-            <li *ngFor="let item of educacion" >
-                <h3 class="titulo-educacion">{{item.nombre}} <mat-icon mat-icon> delete </mat-icon > </h3>
-                
-                <span>{{item.descripcion}}</span>
-            </li>
-        </ul>
-    </div>
-</div>
+
+<mat-list>
+    <mat-list-item *ngFor="let item of educacion">
+        <img matListItemAvatar src="../../../assets/img/icon-book.svg" alt="icon-book">
+      <h2 matListItemTitle>{{item.nombre}} 
+        <mat-icon class="btn-delete" mat-icon (click)="deleteEducacion(educacion[0])"> delete 
+        </mat-icon >
+        <mat-icon class="btn-edit" mat-icon data-bs-toggle="modal" data-bs-target="#exampleModaledit" data-whatever="@mdo" (click)="abrirFormParaEditar()"> edit </mat-icon>
+          <!-- falta agregar el modal en esta parte -->
+        
+      </h2>
+      <p matListItemLine>
+        <span class="demo-1"> {{item.descripcion}}</span>
+      </p>
+    </mat-list-item>
+  </mat-list>
+
+  

@@ -1,9 +1,17 @@
-export class SobreMi {
-    sobreMi : string;
+// export interface SobreMi {
+//     id?: number;
+//     sobreMi : string;
+// }
 
-    constructor(sobreMi:string=""){
-        this.sobreMi = sobreMi}
+export class SobreMi {
+    id?: number;
+    descripcion: string ="";
+
 }
+
+    // constructor(sobreMi:string=""){
+    //     this.sobreMi = sobreMi}
+
 
 
 

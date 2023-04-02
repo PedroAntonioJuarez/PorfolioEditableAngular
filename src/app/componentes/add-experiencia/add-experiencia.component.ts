@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 import {Experiencia} from 'src/assets/models/experiencia'
 
 @Component({
@@ -8,13 +9,22 @@ import {Experiencia} from 'src/assets/models/experiencia'
 })
 export class AddExperienciaComponent implements OnInit {
   @Output()onAddExperiencia: EventEmitter<Experiencia> = new EventEmitter()
-  expriencias:Experiencia[] = []
+  experiencias:Experiencia[] = []
+
+  
+
   texto:string ="";
   descripcion:string="";
+  
+  
 
   constructor(){}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+   
+  }
+
+  
 
   onSubmit(){
     console.log("me apretaste")
@@ -24,9 +34,14 @@ export class AddExperienciaComponent implements OnInit {
     }
     const nuevaExperiencia = {
       nombre: this.texto,
-      description: this.descripcion,
+      descripcion: this.descripcion,
+      
       
     }
     this.onAddExperiencia.emit(nuevaExperiencia)
-}
+
+    alert("Los datos se añadieron exitosamente. Puedes ingresar nuevamente")
+  }
+
+
 }

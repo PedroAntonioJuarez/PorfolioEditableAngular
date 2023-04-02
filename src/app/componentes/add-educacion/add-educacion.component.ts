@@ -13,6 +13,7 @@ export class AddEducacionComponent implements OnInit {
   texto:string =""
   descripcion: string = ""
 
+
   constructor(){}
 
   ngOnInit(): void {
@@ -31,6 +32,7 @@ export class AddEducacionComponent implements OnInit {
     }
     this.addEducacion.emit(nuevaEducacion)
       
+   
 
 
   }

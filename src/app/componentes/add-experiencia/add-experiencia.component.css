@@ -1,0 +1,15 @@
+* {
+    margin-top: 15px;
+}
+.contenedor-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formulario {
+    width: 70%;
+    
+}
+.formulario .btn {
+    width: 100%;
+}

@@ -1,6 +1,6 @@
 <div class="contenedor-formulario">
     <h2>Agregar Educación</h2>
-    <form action="" class="formulario" (ngSubmit)="guardarEducacion()">
+    <form action="" #miForm="ngForm" class="formulario" id="formulario" (ngSubmit)="guardarEducacion(); miForm.resetForm()" >
         <div class="form-group">
             <div class="form-row">
                 <div class="col">
@@ -21,7 +21,7 @@
             </div>
         </div>
        
-        <input type="submit" text="Guardar Educación" class="btn btn-primary">
+        <input type="submit" text="" class="btn btn-primary" value="Guardar Educación">
        
     </form>
     

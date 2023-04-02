@@ -4,3 +4,15 @@
     padding-left: 25px;
     background-color: rgb(242, 240, 238) ;
 }
+
+.btn-delete:hover {
+    border-radius: 30%;
+    background-color:  orange;
+    cursor: pointer;
+}
+
+.btn-edit:hover {
+    border-radius: 30%;
+    background-color:  orange;
+    cursor: pointer;
+}

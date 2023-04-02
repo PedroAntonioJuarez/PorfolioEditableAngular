@@ -3,3 +3,9 @@
     height: auto;
     
 }
+
+.btn-delete:hover {
+    border-radius: 30%;
+    background-color:  orange;
+    cursor: pointer;
+}

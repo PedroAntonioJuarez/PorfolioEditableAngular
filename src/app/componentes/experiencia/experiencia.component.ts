@@ -2,6 +2,8 @@ import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { Experiencia } from 'src/assets/models/experiencia';
 
+import { FormBuilder, FormGroup } from '@angular/forms';
+
 
 
 @Component({
@@ -12,17 +14,37 @@ import { Experiencia } from 'src/assets/models/experiencia';
 export class ExperienciaComponent implements OnInit {
   experiencias:Experiencia[]=[];
   
-  constructor(private porfolioService:PorfolioService){}
+
+  ////////////////////
+
+  formValue!: FormGroup
+  modeloExperiencia: Experiencia = new Experiencia()
+  
+  
+  //////////////////////////
+
+
+  
+  constructor(private porfolioService:PorfolioService, private formBuilder: FormBuilder){}
 
    ngOnInit(): void {
-     this.porfolioService.getAllExperience().subscribe(data => {
-      this.experiencias =data
-     })
-   }
+    this.formValue = this.formBuilder.group({
+      nombre:[''],
+      descripcion:['']
+    })
+     this.getExperiencias()
+    }
+   
+   getExperiencias(){
+    this.porfolioService.getAllExperience().subscribe(data => {
+       this.experiencias =data
+   })}
+
 
    addExperiencia(experiencia:Experiencia){
     this.porfolioService.addExperiencia(experiencia).subscribe(data => {
       this.experiencias.push(data)
+      
     })
   }
 
@@ -34,5 +56,36 @@ export class ExperienciaComponent implements OnInit {
     })
   }
 
+
+
+
+  abrirFormParaEditar(item:Experiencia){
+    this.modeloExperiencia.id = item.id
+    this.formValue.controls['nombre'].setValue(item.nombre);
+    this.formValue.controls['descripcion'].setValue(item.descripcion)
+    
+    console.log(item)
+  }
+
+
+
+  guardarActualizacion(){
+    this.modeloExperiencia.nombre = this.formValue.value.nombre;
+    this.modeloExperiencia.descripcion = this.formValue.value.descripcion;
+    this.porfolioService.updateExperiencia(this.modeloExperiencia).subscribe((a) => {
+      alert("Actualización exitosa. Puede cerrar el formulario")
+      this.formValue.reset();
+      this.getExperiencias();
+
+      // el codigo de abajo funciona para cerrar bien el modal, pero despues no puedo scrollear
+      document.getElementsByClassName("modal-backdrop")[0].remove();
+      
+    })
+    
+
+   }
    
 }
+
+
+

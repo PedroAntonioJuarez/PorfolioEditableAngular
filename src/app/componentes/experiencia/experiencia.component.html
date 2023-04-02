@@ -2,14 +2,72 @@
 <app-add-experiencia
 (onAddExperiencia)="addExperiencia($event)">
 </app-add-experiencia>
-    <h1>Experiencia</h1>
-    <ul *ngFor="let item of experiencias">
-        <li>{{item.nombre}}
-            <mat-icon mat-icon (click)="deleteExperiencia(experiencias)"> delete </mat-icon > 
-        </li>
-        <span>{{item.description}}</span>
-    </ul>  
-</section>
+
+    <h1 >Experiencia</h1>
+<mat-list>
+    <mat-list-item *ngFor="let item of experiencias">
+        <img matListItemAvatar src="../../../assets/img/icon-book.svg" alt="icon-book">
+      <h2 matListItemTitle>{{item.nombre}} 
+        <button class="btn btn-danger"  (click)="deleteExperiencia(experiencias[0])">Eliminar 
+        </button >
+
+        
+<!-- -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModaledit" data-whatever="@mdo" (click)="abrirFormParaEditar(item)">Editar</button>
+      <div class="modal fade" id="exampleModaledit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Actualiza tu nueva Experiencia</h1>
+              <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            </div>
+             <div class="contenedor-formulario">
+                <div class="modal-body">
+                    <h3>Tu experiencia debe contener un título y una descripción</h3>
+                    <form action="" class="formulario" [formGroup]="formValue">
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col">
+                                    <input class="form-control" type="text" formControlName="nombre" id="text" placeholder="Escribe el Título">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input class="form-control" type="text" formControlName="descripcion" placeholder="Escribe una descripción" >
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="modal-footer">
+                             <button type="button" class="btn btn-primary" (click)="guardarActualizacion()">actualizar</button>
+                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          </div>
+                       
+                    </form>
+                  </div>
+                  
+                    
+                </div>
+                
+            </div>
+            
+          </div>
+        </div>
 
 
+      </h2>
+      <p matListItemLine>
+        <span class="demo-1"> {{item.descripcion}}</span>
+      </p>
+    </mat-list-item>
+  </mat-list>
 
+
+  
