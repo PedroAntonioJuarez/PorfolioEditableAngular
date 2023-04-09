@@ -1,73 +1,122 @@
 <section class="experiencia">
-<app-add-experiencia
-(onAddExperiencia)="addExperiencia($event)">
-</app-add-experiencia>
+  <h1 class="titulo">Experiencia</h1>
 
-    <h1 >Experiencia</h1>
-<mat-list>
-    <mat-list-item *ngFor="let item of experiencias">
-        <img matListItemAvatar src="../../../assets/img/icon-book.svg" alt="icon-book">
-      <h2 matListItemTitle>{{item.nombre}} 
-        <button class="btn btn-danger"  (click)="deleteExperiencia(experiencias[0])">Eliminar 
-        </button >
+  <div class="row">
+    <div class="col-sm-4 contenedorSegundo" *ngFor="let item of experiencias" >
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">{{item.nombre}}</h2>
+          <h4 class="card-text">
+            {{item.descripcion}}
+          </h4>
+        </div>
+        <div class="contenedorCapa">
+          <button mat-fab color="warn" (click)="deleteExperiencia(item)">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button
+            class="btn-editar"
+            type="button"
+            mat-fab
+            color="primary"
+            aria-label="Example icon button with a menu icon"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModaledit"
+            data-whatever="@mdo"
+            (click)="abrirFormParaEditar(item)"
+          >
+            <mat-icon>edit</mat-icon></button
+          >>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--Modal -->
 
-        
-<!-- -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModaledit" data-whatever="@mdo" (click)="abrirFormParaEditar(item)">Editar</button>
-      <div class="modal fade" id="exampleModaledit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Actualiza tu nueva Experiencia</h1>
-              <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-            </div>
-             <div class="contenedor-formulario">
-                <div class="modal-body">
-                    <h3>Tu experiencia debe contener un título y una descripción</h3>
-                    <form action="" class="formulario" [formGroup]="formValue">
-                        <div class="form-group">
-                            <div class="form-row">
-                                <div class="col">
-                                    <input class="form-control" type="text" formControlName="nombre" id="text" placeholder="Escribe el Título">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="col">
-                                            <input class="form-control" type="text" formControlName="descripcion" placeholder="Escribe una descripción" >
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        
-                        <div class="modal-footer">
-                             <button type="button" class="btn btn-primary" (click)="guardarActualizacion()">actualizar</button>
-                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                          </div>
-                       
-                    </form>
+  <div
+    class="modal fade"
+    id="exampleModaledit"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Actualiza tu nueva Experiencia
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="contenedor-formulario">
+          <div class="modal-body">
+            <h3>Tu experiencia debe contener un título y una descripción</h3>
+            <form action="" class="formulario" [formGroup]="formValue">
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col">
+                    <input
+                      class="form-control"
+                      type="text"
+                      formControlName="nombre"
+                      id="text"
+                      placeholder="Escribe el Título"
+                    />
                   </div>
-                  
-                    
                 </div>
-                
-            </div>
-            
+              </div>
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="form-group">
+                    <div class="form-row">
+                      <div class="col">
+                        <input
+                          class="form-control"
+                          type="text"
+                          formControlName="descripcion"
+                          placeholder="Escribe una descripción"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  (click)="guardarActualizacion()"
+                >
+                  actualizar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </form>
           </div>
         </div>
-
-
-      </h2>
-      <p matListItemLine>
-        <span class="demo-1"> {{item.descripcion}}</span>
-      </p>
-    </mat-list-item>
-  </mat-list>
-
+      </div>
+    </div>
+  </div>
 
   
+
+  <app-add-experiencia class="addExperienciaBtn" (onAddExperiencia)="addExperiencia($event)">
+  </app-add-experiencia>
+</section>
+
+
+
+

@@ -1,39 +1,9 @@
 {
   "educacion": [
     {
-      "nombre": "creando",
-      "descripcion": "1478523690",
-      "id": 9
-    },
-    {
-      "nombre": "creando",
-      "descripcion": "1478523690",
-      "id": 10
-    },
-    {
-      "nombre": "hola nueva tarea",
-      "descripcion": "hogar",
-      "id": 11
-    },
-    {
-      "nombre": "hola nueva tarea",
-      "descripcion": "hogar",
-      "id": 12
-    },
-    {
       "nombre": "hola gustavo",
       "descripcion": "nueva experienda",
       "id": 13
-    },
-    {
-      "nombre": "hola nueva tarea",
-      "descripcion": "hogar",
-      "id": 14
-    },
-    {
-      "nombre": "hola",
-      "descripcion": "1478523690",
-      "id": 15
     },
     {
       "nombre": "creando",
@@ -41,27 +11,42 @@
       "id": 16
     },
     {
-      "nombre": "hola nueva tarea",
-      "descripcion": "probrando actualizacion",
+      "nombre": "nueva educacion",
+      "descripcion": "nueva educacipoin",
       "id": 17
     }
   ],
   "perfil": [
     {
-      "descripcion": "Hola, mi nombre es Pedro Juárez y soy Desarrolador Web FrontEnd con residencia en Buenos Aires. Actualmente sigo estudiando para ampliar mis conocimientos (Node.js, Angular, Typescript, MySQL). Experto en el trabajo en equipo. Apasionado por el diseño web con interfaces dinámicas que se adapten a todos los dispositivos con una excelente experiencia de usuario sdadasdasdasd\n",
+      "descripcion": "Hola, mi nombre es Pedro Juárez y soy Desarrolador Web FrontEnd con residencia en Buenos Aires. Actualmente sigo estudiando para ampliar mis conocimientos (Node.js, Angular, Typescript, MySQL). Experto en el trabajo en equipo. Apasionado por el diseño web con interfaces dinámicas que se adapten a todos los dispositivos con una excelente experiencia de usuario \n...",
       "id": 1
     }
   ],
   "experiencia": [
     {
-      "id": 1,
-      "nombre": "creando",
-      "descripcion": "nueva experienda465456"
+      "id": 7,
+      "nombre": "hola nueva tareavsdgfsdfsdf",
+      "descripcion": "hola que tal? 4546kdqwkedqwlkeqwlekqwñelkñqwlkeqñwlkeñqwkleqñwkeqwñelkqlwñekqñwelkqwñelkqñelkqwñelqkweñlwqkñlwqkeñlqkeñwqkewqñekqwlñekqwñe"
     },
     {
-      "nombre": "creando",
-      "descripcion": "nueva experienda2",
-      "id": 2
+      "id": 8,
+      "nombre": "hola. que tal",
+      "descripcion": "hola que tal mi nombre eas"
+    },
+    {
+      "nombre": "holapapita",
+      "descripcion": "1478523690",
+      "id": 13
+    },
+    {
+      "nombre": "hola nueva tarea",
+      "descripcion": "formulario",
+      "id": 14
+    },
+    {
+      "nombre": "hola",
+      "descripcion": "hooal gfertgertasdasdasda",
+      "id": 15
     }
   ]
 }

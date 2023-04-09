@@ -1,11 +1,35 @@
-* {
+.educacion {
     width: 100%;
     height: auto;
     
 }
+.titulo {
+    text-align: center;
+    margin-top:15px
+}
+.row {
+    width: 100%;
+}
 
-.btn-delete:hover {
-    border-radius: 30%;
-    background-color:  orange;
-    cursor: pointer;
+.contenedorCapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position:absolute;
+    top: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(22, 27, 29, 0.7);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align:end
+}
+.contenedorCapa button:not(:last-child) {
+    margin-right: 20px;}
+
+.contenedorSegundo :hover > .contenedorCapa{
+    opacity: 1;
+    visibility: visible;
 }

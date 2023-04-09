@@ -78,12 +78,14 @@ export class ExperienciaComponent implements OnInit {
       this.getExperiencias();
 
       // el codigo de abajo funciona para cerrar bien el modal, pero despues no puedo scrollear
-      document.getElementsByClassName("modal-backdrop")[0].remove();
+      // document.getElementsByClassName("modal-backdrop")[0].remove();
       
     })
     
 
    }
+
+
    
 }
 

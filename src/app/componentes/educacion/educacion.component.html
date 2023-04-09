@@ -1,24 +1,42 @@
 <div class="educacion">
-    <app-add-educacion
+    
+
+    <h1 class="titulo">Educación</h1> 
+
+  <div class="row">
+    <div class="col-sm-4 contenedorSegundo" *ngFor="let item of educacion" >
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">{{item.nombre}}</h2>
+          <h4 class="card-text">
+            {{item.descripcion}}
+          </h4>
+        </div>
+        <div class="contenedorCapa">
+          <button mat-fab color="warn" (click)="deleteEducacion(item)">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button
+            class="btn-editar"
+            type="button"
+            mat-fab
+            color="primary"
+            aria-label="Example icon button with a menu icon"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModaledit"
+            data-whatever="@mdo"
+            (click)="abrirFormParaEditar()"
+          >
+            <mat-icon>edit</mat-icon></button
+          >>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-add-educacion
     (addEducacion)="addEducacion($event)">
     </app-add-educacion>
-
-    <h1>Educación</h1> 
-
-<mat-list>
-    <mat-list-item *ngFor="let item of educacion">
-        <img matListItemAvatar src="../../../assets/img/icon-book.svg" alt="icon-book">
-      <h2 matListItemTitle>{{item.nombre}} 
-        <mat-icon class="btn-delete" mat-icon (click)="deleteEducacion(educacion[0])"> delete 
-        </mat-icon >
-        <mat-icon class="btn-edit" mat-icon data-bs-toggle="modal" data-bs-target="#exampleModaledit" data-whatever="@mdo" (click)="abrirFormParaEditar()"> edit </mat-icon>
-          <!-- falta agregar el modal en esta parte -->
-        
-      </h2>
-      <p matListItemLine>
-        <span class="demo-1"> {{item.descripcion}}</span>
-      </p>
-    </mat-list-item>
-  </mat-list>
+</div>
 
   
