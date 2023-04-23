@@ -72,6 +72,11 @@ export class PorfolioService {
     const urlExperiencia = `${this.urlExperiencia}/${experiencia.id}`
     return this.http.put<Experiencia>(urlExperiencia, experiencia, httpOptions)
   }
+
+  updateEducacion(educacion: Educacion):Observable<Educacion>{
+    const urlEducacion = `${this.urlEducacion}/${educacion.id}`
+    return this.http.put<Experiencia>(urlEducacion, educacion, httpOptions)
+  }
 }
 
  

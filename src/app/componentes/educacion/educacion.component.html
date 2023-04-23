@@ -23,9 +23,9 @@
             color="primary"
             aria-label="Example icon button with a menu icon"
             data-bs-toggle="modal"
-            data-bs-target="#exampleModaledit"
+            data-bs-target="#exampleModaledit2"
             data-whatever="@mdo"
-            (click)="abrirFormParaEditar()"
+            (click)="abrirFormParaEditar(item)"
           >
             <mat-icon>edit</mat-icon></button
           >>
@@ -33,6 +33,84 @@
       </div>
     </div>
   </div>
+
+  <div
+  class="modal fade"
+  id="exampleModaledit2"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          Actualiza tu nueva Educación
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="contenedor-formulario">
+        <div class="modal-body">
+          <h3>Tu Educación debe contener un título y una descripción</h3>
+          <form action="" class="formulario" [formGroup]="formValue">
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    type="text"
+                    formControlName="nombre"
+                    id="text"
+                    placeholder="Escribe el Título"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="form-group">
+                  <div class="form-row">
+                    <div class="col">
+                      <input
+                        class="form-control"
+                        type="text"
+                        formControlName="descripcion"
+                        placeholder="Escribe una descripción"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                (click)="guardarActualizacion()"
+              >
+                actualizar
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
 
   <app-add-educacion
     (addEducacion)="addEducacion($event)">

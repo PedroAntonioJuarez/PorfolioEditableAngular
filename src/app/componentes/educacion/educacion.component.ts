@@ -18,12 +18,22 @@ export class EducacionComponent implements OnInit {
   
   
 
-   constructor(private porfolioService:PorfolioService, private formBulder: FormBuilder){}
+   constructor(private porfolioService:PorfolioService, private formBuilder: FormBuilder){}
 
    ngOnInit(): void {
-    this.porfolioService.getEducacion().subscribe(e => {
-      this.educacion = e
-    })
+this.formValue = this.formBuilder.group({
+  nombre:[''],
+  descripcion:['']
+  })
+
+    this.getEducacion()
+     }
+
+
+     getEducacion(){
+      this.porfolioService.getEducacion().subscribe(e => {
+        this.educacion = e
+      })
      }
 
      addEducacion(educacion:Educacion){
@@ -40,10 +50,24 @@ export class EducacionComponent implements OnInit {
       })
     }
       
-    abrirFormParaEditar(){}
+    abrirFormParaEditar(item:Educacion){
+      this.modeloEducacion.id = item.id
+      this.formValue.controls['nombre'].setValue(item.nombre)
+      this.formValue.controls['descripcion'].setValue(item.descripcion)
+
+     
+    }
 
 
-    guardarActualizacion(){}
+    guardarActualizacion(){
+      this.modeloEducacion.nombre = this.formValue.value.nombre;
+      this.modeloEducacion.descripcion =this.formValue.value.descripcion;
+      this.porfolioService.updateEducacion(this.modeloEducacion).subscribe(data =>{
+        alert("Actualización exitosa. Puedes cerrar el formulario");
+        this.formValue.reset();
+        this.getEducacion()
+      })
+    }
    
     }
 

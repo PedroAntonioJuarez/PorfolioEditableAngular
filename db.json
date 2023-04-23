@@ -1,52 +1,42 @@
 {
   "educacion": [
     {
-      "nombre": "hola gustavo",
-      "descripcion": "nueva experienda",
-      "id": 13
+      "id": 13,
+      "nombre": "Técnico en Música Popular y Academica",
+      "descripcion": "Escuela Superior de Educación Artística "
     },
     {
-      "nombre": "creando",
-      "descripcion": "nueva experienda",
-      "id": 16
-    },
-    {
-      "nombre": "nueva educacion",
-      "descripcion": "nueva educacipoin",
-      "id": 17
+      "id": 17,
+      "nombre": "Probando",
+      "descripcion": "probando"
     }
   ],
   "perfil": [
     {
-      "descripcion": "Hola, mi nombre es Pedro Juárez y soy Desarrolador Web FrontEnd con residencia en Buenos Aires. Actualmente sigo estudiando para ampliar mis conocimientos (Node.js, Angular, Typescript, MySQL). Experto en el trabajo en equipo. Apasionado por el diseño web con interfaces dinámicas que se adapten a todos los dispositivos con una excelente experiencia de usuario \n...",
+      "descripcion": "Hola, mi nombre es Pedro Juárez y soy Desarrolador Web FrontEnd con residencia en Buenos Aires. Actualmente sigo estudiando para ampliar mis conocimientos (Node.js, Angular, Typescript, MySQL). Experto en el trabajo en equipo. Apasionado por el diseño web con interfaces dinámicas que se adapten a todos los dispositivos con una excelente experiencia de usuario \n",
       "id": 1
     }
   ],
   "experiencia": [
     {
-      "id": 7,
-      "nombre": "hola nueva tareavsdgfsdfsdf",
-      "descripcion": "hola que tal? 4546kdqwkedqwlkeqwlekqwñelkñqwlkeqñwlkeñqwkleqñwkeqwñelkqlwñekqñwelkqwñelkqñelkqwñelqkweñlwqkñlwqkeñlqkeñwqkewqñekqwlñekqwñe"
-    },
-    {
       "id": 8,
-      "nombre": "hola. que tal",
-      "descripcion": "hola que tal mi nombre eas"
+      "nombre": "Actor",
+      "descripcion": "Me desempeñe como actor en numerosas compañías de Teatro Independiente. "
     },
     {
-      "nombre": "holapapita",
-      "descripcion": "1478523690",
-      "id": 13
+      "id": 14,
+      "nombre": "Docente",
+      "descripcion": "Profesor de Teatro en Escuelas publicas y privadas"
     },
     {
-      "nombre": "hola nueva tarea",
-      "descripcion": "formulario",
-      "id": 14
+      "id": 15,
+      "nombre": "Atención al Cliente",
+      "descripcion": "Me desempeñe como Recepcionista en el Banco BBVA"
     },
     {
-      "nombre": "hola",
-      "descripcion": "hooal gfertgertasdasdasda",
-      "id": 15
+      "id": 16,
+      "nombre": "Desarrolador Front-End",
+      "descripcion": "Como se puede ver en \"mis proyectos\", desarrolle distintas webs con HTML, CSS, SASS y JS"
     }
   ]
 }

@@ -46,6 +46,14 @@ export class SectionSobreMiComponent implements OnInit {
     this.porfolioService.updateSobreMi(this.modeloSobremi).subscribe(data => {
       alert("guardado correctamente")
       this.getSobremi()
+
+
+      let cancel = document.getElementById('cancel');
+
+      cancel?.click()
+      this.formValue.reset();
+
+      document.getElementsByClassName("modal-backdrop")[0].remove();
     })
 }
 

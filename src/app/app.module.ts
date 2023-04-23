@@ -8,6 +8,7 @@ import { AppRoutingModule, routingComponent } from './app-routing.module';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon'
 import {MatListModule} from '@angular/material/list'
+import {MatRadioModule} from '@angular/material/radio'
 
 
 
@@ -61,7 +62,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatIconModule,
     MatListModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

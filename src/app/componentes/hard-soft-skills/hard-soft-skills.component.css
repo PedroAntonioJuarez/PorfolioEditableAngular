@@ -6,15 +6,15 @@ section {
     align-items: center;
     background-color: rgb(242, 240, 238) 
    
-    
-  
-   
-
-}
+    }
 
 section .progress {
     height: 30px;
     width: 75%;
     
-    
+
+}
+.titulo {
+    text-align: center;
+    margin-top: 15px
 }
