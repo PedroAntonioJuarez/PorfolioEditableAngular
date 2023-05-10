@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
 import { Educacion } from 'src/assets/models/educacion';
+import { AutenticarService } from 'src/app/servicios/autenticar.service';
 ;
 
 @Component({
@@ -14,7 +15,7 @@ export class AddEducacionComponent implements OnInit {
   descripcion: string = ""
 
 
-  constructor(){}
+  constructor(private autenticarService: AutenticarService){}
 
   ngOnInit(): void {
     

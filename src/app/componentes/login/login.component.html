@@ -2,46 +2,42 @@
 
 <div class="wrapper fadeInDown">
   <div id="formContent">
-    <!-- Tabs Titles -->
-
-    <!-- Icon -->
-    <div class="fadeIn first">
+ 
+    <div class="m-5">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
         <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
       </svg>
     </div>
 
-    <!-- Login Form -->
-    <form [formGroup]="myForm" (ngSubmit)="login()">
+    <form [formGroup]="myForm" (ngSubmit)="login($event)">
      
-      <input type="text" id="email" class="form-control" formControlName="email"  placeholder="email">
-
-      <div class="alert alert-danger mt-2" [hidden]="myForm.valid || myForm.pristine" >
-
-        <span *ngIf="myForm.controls['email'].hasError('required')">El correo electrónico es obligatorio</span>
-      <span *ngIf="myForm.controls['email'].hasError('email')">El correo electrónico no es válido</span>
-
-      </div>
-      
-   
-    
-      <input type="text" formControlName="password" class="form-control" placeholder="contraseña">
-
-      <div class="alert alert-danger mt-2" [hidden]="myForm.valid || myForm.pristine" >
-        
-        <span *ngIf="myForm.controls['password'].hasError('required')">La contraseña es obligatoria</span>
-        
-        <span *ngIf="myForm.controls['password'].hasError('minlength')">La contraseña debe tener al menos 8 caracteres</span>
-        
+      <input type="text" id="email" class="form-control" formControlName="email"  placeholder="email" [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}">
+      <div *ngIf="Email?.errors && Email?.touched">
+        <p *ngIf="Email?.hasError('required')" class="text-danger">
+          El email es requerido.
+        </p>
+        <p *ngIf="Email?.hasError('email')" class="text-danger">
+          Debe escribir un email válido
+        </p>
       </div>
     
-      <input type="submit" class="fadeIn fourth" value="Iniciar" routerLink="" [disabled]="!myForm.valid" >
+      <input type="text" formControlName="password" class="form-control" placeholder="contraseña" [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}">
+
+      <div *ngIf="Password?.errors && Password?.touched">
+        <p *ngIf="Password?.hasError('required')" class="text-danger">
+            La contraseña es requerida.
+        </p>
+        <p *ngIf="Password?.hasError('minlength')" class="text-danger">
+          La contraseña debe ser de 8 o mas caracteres.
+        </p>
+      </div>
+    
+      <input type="submit" class="btn btn-primary" value="Iniciar" [disabled]="!myForm.valid" >
     </form>
 
-    <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a class="underlineHover" href="#">Olvidaste tu contreseña?</a>
+      <a class="underlineHover" href="">Olvidaste tu contreseña?</a>
     </div>
 
   </div>

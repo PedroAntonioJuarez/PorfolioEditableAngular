@@ -16,9 +16,11 @@ const httpOptions = {
 })
 export class PorfolioService {
   
-  private urlExperiencia ='http://localhost:3000/experiencia'
-  private urlSobremi = 'http://localhost:3000/perfil'
-  private urlEducacion = 'http://localhost:3000/educacion'
+  // private urlExperiencia ='http://localhost:3000/experiencia'
+  private urlApi ='https://porfolio-backend-p5jp.onrender.com'
+  private urlExperiencia ='https://porfolio-backend-p5jp.onrender.com/ver/experiencia'
+  private urlSobremi = 'https://porfolio-backend-p5jp.onrender.com/ver/personas'
+  private urlEducacion = 'https://porfolio-backend-p5jp.onrender.com/ver/educacion'
   
 
   experiencia: Experiencia[]=[]
@@ -53,28 +55,38 @@ export class PorfolioService {
   }
       
 
+  // eliminaExperiencia(experiencia: Experiencia):Observable<Experiencia>{
+  //   const url = `${this.urlExperiencia}/${experiencia.id}`
+  //   return this.http.delete<Experiencia>(url)
+  // }
+
+  //////borar el de abajo si no funciona
   eliminaExperiencia(experiencia: Experiencia):Observable<Experiencia>{
-    const url = `${this.urlExperiencia}/${experiencia.id}`
+    
+    const url = `${this.urlApi}/borrar/${experiencia.id}`
     return this.http.delete<Experiencia>(url)
   }
 
+
+  
+
   eliminarEducacion(educacion:Educacion):Observable<Educacion>{
-    const urlEducacion = `${this.urlEducacion}/${educacion.id}`
+    const urlEducacion = `${this.urlApi}/borrarEdu/${educacion.id}`
     return this.http.delete<Educacion>(urlEducacion)
   }
 
   updateSobreMi(perfil:SobreMi):Observable<SobreMi[]>{
-    const urlSobreMi = `${this.urlSobremi}/${perfil.id}`
+    const urlSobreMi = `${this.urlApi}/actualizar/persona/${perfil.id}`
     return this.http.put<SobreMi[]>(urlSobreMi, perfil, httpOptions)
   }
 
   updateExperiencia(experiencia: Experiencia):Observable<Experiencia>{
-    const urlExperiencia = `${this.urlExperiencia}/${experiencia.id}`
+    const urlExperiencia = `${this.urlApi}/actualizar/experiencia/${experiencia.id}`
     return this.http.put<Experiencia>(urlExperiencia, experiencia, httpOptions)
   }
 
   updateEducacion(educacion: Educacion):Observable<Educacion>{
-    const urlEducacion = `${this.urlEducacion}/${educacion.id}`
+    const urlEducacion = `${this.urlApi}/actualizar/educacion/${educacion.id}`
     return this.http.put<Experiencia>(urlEducacion, educacion, httpOptions)
   }
 }

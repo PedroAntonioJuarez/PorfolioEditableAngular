@@ -1,9 +1,8 @@
-* {
-    font-family: 'Nunito Sans', sans-serif;
-}
+
+
 
 /*inicio*/
-
+body { margin: 0; }
 
 
 
@@ -14,6 +13,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
  }
 
     .titulo {
@@ -168,7 +168,7 @@ footer {
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 
 
 
