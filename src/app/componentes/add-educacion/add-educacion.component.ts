@@ -11,7 +11,7 @@ import { AutenticarService } from 'src/app/servicios/autenticar.service';
 export class AddEducacionComponent implements OnInit {
   @Output()addEducacion:EventEmitter<Educacion> = new EventEmitter()
   educacion:Educacion[]=[]
-  texto:string =""
+  nombre:string =""
   descripcion: string = ""
 
 
@@ -23,12 +23,12 @@ export class AddEducacionComponent implements OnInit {
   guardarEducacion(){
     console.log("me aprestaste")
 
-    if(this.texto.length === 0){
+    if(this.nombre.length === 0){
       alert ("no insertaste ninguna nueva Educación")
       return }
 
     const nuevaEducacion = {
-      nombre: this.texto,
+      nombre: this.nombre,
       descripcion: this.descripcion
     }
     this.addEducacion.emit(nuevaEducacion)

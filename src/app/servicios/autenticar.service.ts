@@ -3,6 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {BehaviorSubject, Observable} from 'rxjs';
 import { map } from 'rxjs/operators';
 
+// EL LOGIN NO FUNCIONA
+
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':'application/json'
@@ -14,7 +16,7 @@ const httpOptions = {
 export class AutenticarService {
 
 
-  url = 'http://localhost:3000/login';
+  url = 'https://porfolio-frontend-pedro.web.app';
   currentUserSubjet: BehaviorSubject<any>;
 
 
@@ -26,11 +28,14 @@ export class AutenticarService {
     this.currentUserSubjet = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser')|| '{}'));
 
   }
-  iniciarSesion(credenciales:any):Observable<any>{
-    return this.http.post(this.url, credenciales, httpOptions).pipe(map(response => {
-      sessionStorage.setItem('currentUser', JSON.stringify(response));
-      this.isLoggedIn = true;
-      return response;
-    }))
-  }
+ 
+
+  // iniciarSesion(credenciales:any):Observable<any>{
+  //   return this.http.post(this.url, credenciales).pipe(map(response => {
+  //     sessionStorage.setItem('currentUser', JSON.stringify(response));
+  //     this.isLoggedIn = true;
+  //     return response;
+  //   }))
+  // }
+ 
 }

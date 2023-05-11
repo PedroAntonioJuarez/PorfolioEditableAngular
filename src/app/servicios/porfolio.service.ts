@@ -47,28 +47,19 @@ export class PorfolioService {
 
     
   addExperiencia(experiencia:Experiencia):Observable<Experiencia>{
-    return this.http.post<Experiencia>(this.urlExperiencia, experiencia, httpOptions)
+    return this.http.post<Experiencia>(`https://porfolio-backend-p5jp.onrender.com/agregar/experiencia`, experiencia, httpOptions)
   }
 
   addEducacion(educacion:Educacion):Observable<Educacion>{
-    return this.http.post<Educacion>(this.urlEducacion, educacion, httpOptions)
+    return this.http.post<Educacion>(`https://porfolio-backend-p5jp.onrender.com/agregar/educacion`, educacion, httpOptions)
   }
       
 
-  // eliminaExperiencia(experiencia: Experiencia):Observable<Experiencia>{
-  //   const url = `${this.urlExperiencia}/${experiencia.id}`
-  //   return this.http.delete<Experiencia>(url)
-  // }
-
-  //////borar el de abajo si no funciona
   eliminaExperiencia(experiencia: Experiencia):Observable<Experiencia>{
     
     const url = `${this.urlApi}/borrar/${experiencia.id}`
     return this.http.delete<Experiencia>(url)
   }
-
-
-  
 
   eliminarEducacion(educacion:Educacion):Observable<Educacion>{
     const urlEducacion = `${this.urlApi}/borrarEdu/${educacion.id}`
@@ -76,17 +67,17 @@ export class PorfolioService {
   }
 
   updateSobreMi(perfil:SobreMi):Observable<SobreMi[]>{
-    const urlSobreMi = `${this.urlApi}/actualizar/persona/${perfil.id}`
+    const urlSobreMi = `${this.urlApi}/actualizar/persona`
     return this.http.put<SobreMi[]>(urlSobreMi, perfil, httpOptions)
   }
 
   updateExperiencia(experiencia: Experiencia):Observable<Experiencia>{
-    const urlExperiencia = `${this.urlApi}/actualizar/experiencia/${experiencia.id}`
+    const urlExperiencia = `${this.urlApi}/actualizar/experiencia`
     return this.http.put<Experiencia>(urlExperiencia, experiencia, httpOptions)
   }
 
   updateEducacion(educacion: Educacion):Observable<Educacion>{
-    const urlEducacion = `${this.urlApi}/actualizar/educacion/${educacion.id}`
+    const urlEducacion = `${this.urlApi}/actualizar/educacion`
     return this.http.put<Experiencia>(urlEducacion, educacion, httpOptions)
   }
 }

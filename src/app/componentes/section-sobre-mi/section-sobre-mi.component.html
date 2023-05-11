@@ -16,7 +16,7 @@
                 <form #miFormulario="ngForm" [formGroup]="formValue">
                   <div class="mb-3">
                     <label for="message-text" class="col-form-label">Cuéntanos sobre ti</label>
-                    <textarea rows="20" class="form-control" id="message-text" formControlName="descripcion"></textarea>
+                    <textarea rows="20" class="form-control" id="message-text" maxlength="500" formControlName="descripcion"></textarea>
                   </div>
                   <div class="modal-footer">
                     <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -50,4 +50,5 @@
           <li><img src="../../../assets/img/angular-logo.png" alt="icono-angular"></li>
         </ul>
     </div>
+
   </section>

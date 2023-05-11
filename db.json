@@ -13,7 +13,7 @@
   ],
   "perfil": [
     {
-      "descripcion": "Hola, mi nombre es Pedro Juárez y soy Desarrolador Web FrontEnd con residencia en Buenos Aires. Actualmente sigo estudiando para ampliar mis conocimientos (Node.js, Angular, Typescript, MySQL). Experto en el trabajo en equipo. Apasionado por el diseño web con interfaces dinámicas que se adapten a todos los dispositivos con una excelente experiencia de usuario \n",
+      "descripcion": "Hola, mi nombre es Pedro Juárez y soy Desarrolador Web FrontEnd con residencia en Buenos Aires. Actualmente sigo estudiando para ampliar mis conocimientos (Node.js, Angular, Typescript, MySQL). Experto en el trabajo en equipo. Apasionado por el diseño web con interfaces dinámicas que se adapten a todos los dispositivos con una excelente experiencia de usuario",
       "id": 1
     }
   ],
@@ -49,106 +49,7 @@
         "deviceType": "DEVICE_TYPE_ANDROID",
         "notificationToken": "67657575eececc34"
       }
-    },
-    {
-      "email": "pedrojuarezvisuara@gmail.com",
-      "password": "pedrojaja",
-      "deviceInfo": {
-        "devideId": "17867868768",
-        "deviceType": "DEVICE_TYPE_ANDROID",
-        "notificationToken": "67657575eececc34"
-      },
-      "id": 2
-    },
-    {
-      "email": "pedrojuarezvisuara@gmail.com",
-      "password": "pedrojaja",
-      "deviceInfo": {
-        "devideId": "17867868768",
-        "deviceType": "DEVICE_TYPE_ANDROID",
-        "notificationToken": "67657575eececc34"
-      },
-      "id": 3
-    },
-    {
-      "email": "pedro88_2@hotmail.com",
-      "password": "jujujudfcd",
-      "deviceInfo": {
-        "devideId": "17867868768",
-        "deviceType": "DEVICE_TYPE_ANDROID",
-        "notificationToken": "67657575eececc34"
-      },
-      "id": 4
-    },
-    {
-      "email": "pedro88_2@hotmail.com",
-      "password": "jujujudfcd",
-      "deviceInfo": {
-        "devideId": "17867868768",
-        "deviceType": "DEVICE_TYPE_ANDROID",
-        "notificationToken": "67657575eececc34"
-      },
-      "id": 5
-    },
-    {
-      "email": "pedro88_2@hotmail.com",
-      "password": "jujujudfcd",
-      "deviceInfo": {
-        "devideId": "17867868768",
-        "deviceType": "DEVICE_TYPE_ANDROID",
-        "notificationToken": "67657575eececc34"
-      },
-      "id": 6
-    },
-    {
-      "email": "pedrojuarezvisuara@gmail.com",
-      "password": "Pedropedro",
-      "deviceInfo": {
-        "devideId": "17867868768",
-        "deviceType": "DEVICE_TYPE_ANDROID",
-        "notificationToken": "67657575eececc34"
-      },
-      "id": 7
-    },
-    {
-      "email": "pedrojuarezvisuara@gmail.com",
-      "password": "asdadfadasd",
-      "deviceInfo": {
-        "devideId": "17867868768",
-        "deviceType": "DEVICE_TYPE_ANDROID",
-        "notificationToken": "67657575eececc34"
-      },
-      "id": 8
-    },
-    {
-      "email": "pedrojuarezvisuara@gmail.com",
-      "password": "asdfsdfsfsdf",
-      "deviceInfo": {
-        "devideId": "17867868768",
-        "deviceType": "DEVICE_TYPE_ANDROID",
-        "notificationToken": "67657575eececc34"
-      },
-      "id": 9
-    },
-    {
-      "email": "pedrojuarezvisuara@gmail.com",
-      "password": "PEdrojuarez",
-      "deviceInfo": {
-        "devideId": "17867868768",
-        "deviceType": "DEVICE_TYPE_ANDROID",
-        "notificationToken": "67657575eececc34"
-      },
-      "id": 10
-    },
-    {
-      "email": "paula_v_fuentes@yahoo.com.ar",
-      "password": "sfsdfsdfsfs",
-      "deviceInfo": {
-        "devideId": "17867868768",
-        "deviceType": "DEVICE_TYPE_ANDROID",
-        "notificationToken": "67657575eececc34"
-      },
-      "id": 11
     }
+    
   ]
 }

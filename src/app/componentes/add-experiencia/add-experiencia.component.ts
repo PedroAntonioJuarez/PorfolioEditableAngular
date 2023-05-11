@@ -13,7 +13,7 @@ export class AddExperienciaComponent implements OnInit {
 
   
 
-  texto:string ="";
+  nombre:string ="";
   descripcion:string="";
   
   
@@ -28,17 +28,17 @@ export class AddExperienciaComponent implements OnInit {
 
   onSubmit(){
     console.log("me apretaste")
-    if(this.texto.length === 0){
+    const nuevaExperiencia = {
+      nombre: this.nombre,
+      descripcion: this.descripcion,
+      }
+
+    
+    if(this.nombre.length === 0){
       alert("ingresa una tarea")
       return
     }
-    const nuevaExperiencia = {
-      nombre: this.texto,
-      descripcion: this.descripcion,
-      
-      
-    }
-    this.onAddExperiencia.emit(nuevaExperiencia)
+        this.onAddExperiencia.emit(nuevaExperiencia)
 
     alert("Los datos se añadieron exitosamente. Puedes ingresar nuevamente")
   }

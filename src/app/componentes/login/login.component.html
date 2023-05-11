@@ -10,7 +10,7 @@
       </svg>
     </div>
 
-    <form [formGroup]="myForm" (ngSubmit)="login($event)">
+    <form [formGroup]="myForm" (ngSubmit)="enviar()">
      
       <input type="text" id="email" class="form-control" formControlName="email"  placeholder="email" [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}">
       <div *ngIf="Email?.errors && Email?.touched">
@@ -33,11 +33,12 @@
         </p>
       </div>
     
-      <input type="submit" class="btn btn-primary" value="Iniciar" [disabled]="!myForm.valid" >
+      <input type="submit" class="btn btn-primary" value="Iniciar" [disabled]="!myForm.valid">
     </form>
+   
 
     <div id="formFooter">
-      <a class="underlineHover" href="">Olvidaste tu contreseña?</a>
+      <a class="underlineHover" href="https://porfolio-frontend-pedro.web.app/">Volver</a>
     </div>
 
   </div>
