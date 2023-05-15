@@ -40,13 +40,6 @@ export class LoginComponent implements OnInit {
     return this.myForm.get('password')
   }
 
-    // login(event:Event){
-    //   event.preventDefault;
-    //   this.autenticarService.iniciarSesion(this.myForm.value).subscribe(data => {
-    //     console.log("data" + JSON.stringify(data))
-    //     this.ruta.navigate(['']);
-    //   })
-    // }
 
     enviar(){
       this.ruta.navigate(['']);
