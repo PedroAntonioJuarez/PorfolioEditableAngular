@@ -15,8 +15,7 @@ export class AddExperienciaComponent implements OnInit {
 
   nombre:string ="";
   descripcion:string="";
-  
-  
+   
 
   constructor(){}
 
@@ -30,17 +29,18 @@ export class AddExperienciaComponent implements OnInit {
     console.log("me apretaste")
     const nuevaExperiencia = {
       nombre: this.nombre,
-      descripcion: this.descripcion,
+      descripcion: this.descripcion
       }
+      console.log("guardo los input en una variable")
 
     
     if(this.nombre.length === 0){
       alert("ingresa una tarea")
       return
     }
-        this.onAddExperiencia.emit(nuevaExperiencia)
 
     alert("Los datos se añadieron exitosamente. Puedes ingresar nuevamente")
+    this.onAddExperiencia.emit(nuevaExperiencia)
   }
 
 
